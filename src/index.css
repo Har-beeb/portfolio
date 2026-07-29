@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-background: var(--bg-color);
+  --color-foreground: var(--fg-color);
+  --color-card: var(--card-color);
+  --color-cardHover: var(--card-hover-color);
+  --color-accent: var(--accent-color);
+}
+
+@layer base {
+  :root {
+    /* Light Mode */
+    --bg-color: #f4f4f5;
+    --fg-color: #09090b;
+    --card-color: #ffffff;
+    --card-hover-color: #e4e4e7;
+    --accent-color: #6d28d9; /* Deep purple */
+  }
+
+  .dark {
+    /* Dark Mode */
+    --bg-color: #09090b;
+    --fg-color: #fafafa;
+    --card-color: #18181b;
+    --card-hover-color: #27272a;
+    --accent-color: #8b5cf6; /* Neon purple */
+  }
+
+  body {
+    @apply bg-background text-foreground selection:bg-accent selection:text-white font-sans antialiased transition-colors duration-300;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--card-hover-color);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
