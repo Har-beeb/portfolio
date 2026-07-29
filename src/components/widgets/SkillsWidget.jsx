@@ -24,22 +24,22 @@ export const SkillsWidget = () => (
     <SkillCategory 
       icon={Layout} 
       title="Frontend & UI" 
-      skills={['JavaScript', 'React.js', 'Next.js', 'Tailwind CSS', 'MaterialUI']} 
+      skills={['JavaScript', 'React.js', 'Redux', 'Tailwind CSS', 'MaterialUI']} 
     />
     <SkillCategory 
       icon={Server} 
       title="Backend & Logic" 
-      skills={['Node.js', 'Express.js', 'Python', 'Java', 'GraphQL', 'DSA']} 
+      skills={['Node.js', 'Express.js', 'Python', 'REST APIs', 'JWT Auth']} 
     />
     <SkillCategory 
       icon={Database} 
-      title="Database & Testing" 
-      skills={['MongoDB', 'Jest', 'Supertest', 'Playwright']} 
+      title="Database & Storage" 
+      skills={['MongoDB', 'Mongoose', 'Supabase', 'Cloudinary', 'Redis']} 
     />
     <SkillCategory 
       icon={Terminal} 
-      title="Modern Workflows" 
-      skills={['Agentic AI', 'Prompt Engineering', 'AI-Augmented Dev']} 
+      title="Tools & Workflows" 
+      skills={['Git', 'Vite', 'Postman', 'Figma', 'Prompt Engineering']} 
     />
   </SpotlightCard>
 );

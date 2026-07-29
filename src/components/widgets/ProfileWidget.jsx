@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SpotlightCard } from '../ui/SpotlightCard';
 
-const IMAGES = ['/img1.jpg', '/img2.jpg', '/img3.jpg'];
+const IMAGES = ['/img1.jpg', '/img2.jpg'];
 
 export const ProfileWidget = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

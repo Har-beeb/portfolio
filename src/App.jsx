@@ -7,12 +7,31 @@ import { AboutWidget } from './components/widgets/AboutWidget';
 import { ProjectsWidget } from './components/widgets/ProjectsWidget';
 import { SkillsWidget } from './components/widgets/SkillsWidget';
 import { ProfileWidget } from './components/widgets/ProfileWidget';
-import { CoffeeWidget } from './components/widgets/CoffeeWidget';
+import { FeedbackWidget } from './components/widgets/FeedbackWidget';
 import { LifeWidget } from './components/widgets/LifeWidget';
+import { CVPage } from './pages/CVPage';
 
 function App() {
   const [theme, setTheme] = useState('dark');
   const [activeTab, setActiveTab] = useState('hero');
+  const [currentView, setCurrentView] = useState('portfolio');
+
+  useEffect(() => {
+    // Handle hash routing
+    const handleHashChange = () => {
+      if (window.location.hash === '#cv') {
+        setCurrentView('cv');
+      } else {
+        setCurrentView('portfolio');
+      }
+    };
+    
+    // Initial check
+    handleHashChange();
+    
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
 
   useEffect(() => {
     // Check local storage or system preference on mount
@@ -49,7 +68,7 @@ function App() {
         <div className="flex flex-col gap-6">
           <AboutWidget />
           <LifeWidget />
-          <CoffeeWidget />
+          <FeedbackWidget />
         </div>
       );
       case 'projects': return <ProjectsWidget />;
@@ -62,8 +81,12 @@ function App() {
     <div className="min-h-screen bg-background selection:bg-accent/30 font-sans transition-colors duration-500 overflow-x-hidden">
       <RopeSwitch theme={theme} toggleTheme={toggleTheme} />
       
-      {/* Container with dynamic padding for Dock on mobile */}
-      <div className="max-w-6xl mx-auto p-4 md:p-8 lg:p-12 pb-24 md:pb-12">
+      {currentView === 'cv' ? (
+        <CVPage />
+      ) : (
+        <>
+          {/* Container with dynamic padding for Dock on mobile */}
+          <div className="max-w-6xl mx-auto p-4 md:p-8 lg:p-12 pb-24 md:pb-12">
         
         {/* Header */}
         <header className="flex justify-between items-center mb-8 px-2 mt-4 md:mt-0">
@@ -82,7 +105,7 @@ function App() {
           <ProjectsWidget />
           <SkillsWidget />
           <LifeWidget />
-          <CoffeeWidget />
+          <FeedbackWidget />
         </main>
 
         {/* Mobile View (App-like OS Routing) */}
@@ -106,7 +129,9 @@ function App() {
         </footer>
       </div>
 
-      <DockNav activeTab={activeTab} setActiveTab={setActiveTab} />
+        <DockNav activeTab={activeTab} setActiveTab={setActiveTab} />
+        </>
+      )}
     </div>
   );
 }
