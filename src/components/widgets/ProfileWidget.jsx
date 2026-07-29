@@ -24,7 +24,7 @@ export const ProfileWidget = () => {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-full h-full object-cover absolute inset-0 rounded-3xl"
+          className="w-full h-full object-cover object-[center_top] md:object-center absolute inset-0 rounded-3xl"
           alt="Profile Carousel"
         />
       </AnimatePresence>
