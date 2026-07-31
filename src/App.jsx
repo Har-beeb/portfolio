@@ -79,7 +79,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-background selection:bg-accent/30 font-sans transition-colors duration-500 overflow-x-hidden">
-      <RopeSwitch theme={theme} toggleTheme={toggleTheme} />
+      {currentView !== 'cv' && <RopeSwitch theme={theme} toggleTheme={toggleTheme} />}
       
       {currentView === 'cv' ? (
         <CVPage />

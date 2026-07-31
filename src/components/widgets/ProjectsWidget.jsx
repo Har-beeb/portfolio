@@ -21,6 +21,16 @@ export const ProjectsWidget = () => {
               onClick={() => setSelectedId(project.id)}
               className="p-5 rounded-2xl bg-black/5 dark:bg-black/20 hover:bg-black/10 dark:hover:bg-black/40 border border-black/5 dark:border-white/5 hover:border-accent/50 transition-colors cursor-pointer group"
             >
+              {/* Image Placeholder (Hidden on mobile) */}
+              <div className="hidden md:block w-full h-32 mb-4 bg-black/10 dark:bg-white/10 rounded-xl overflow-hidden relative">
+                {project.image ? (
+                  <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-zinc-400 dark:text-zinc-500 text-sm font-medium">
+                    [Project Image Placeholder]
+                  </div>
+                )}
+              </div>
               <div className="flex justify-between items-start mb-2">
                 <h4 className="font-semibold text-lg group-hover:text-accent transition-colors">{project.title}</h4>
                 <ArrowUpRight size={18} className="text-zinc-400 group-hover:text-accent transition-colors" />
@@ -59,6 +69,16 @@ export const ProjectsWidget = () => {
                       <button onClick={() => setSelectedId(null)} className="p-2 bg-black/5 dark:bg-white/5 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors">
                         <X size={20} />
                       </button>
+                    </div>
+                    {/* Image Placeholder (Hidden on mobile) */}
+                    <div className="hidden md:block w-full h-48 md:h-64 mb-6 bg-black/10 dark:bg-white/10 rounded-2xl overflow-hidden relative">
+                      {project.image ? (
+                        <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-zinc-400 dark:text-zinc-500 font-medium">
+                          [Project Image Placeholder]
+                        </div>
+                      )}
                     </div>
                     <p className="text-lg text-foreground mb-4">{project.desc}</p>
                     <p className="text-zinc-600 dark:text-zinc-400 mb-8 leading-relaxed">{project.details}</p>
