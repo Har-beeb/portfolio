@@ -144,13 +144,13 @@ export const FeedbackWidget = () => {
         {/* Left Side: Header & Form */}
         <div className="flex flex-col gap-6">
           {/* Header Segment */}
-          <div className="flex flex-col gap-3">
-            <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+          <div className="flex flex-row items-center gap-4">
+            <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent shrink-0">
               <MessageSquare size={20} />
             </div>
             <div>
-              <h3 className="font-bold text-xl">Leave Feedback</h3>
-              <p className="text-sm text-zinc-500 mt-1">Tips, thoughts, or just say hi!</p>
+              <h3 className="font-bold text-xl leading-tight">Leave Feedback</h3>
+              <p className="text-sm text-zinc-500 mt-0.5">Tips, thoughts, or just say hi!</p>
             </div>
           </div>
 
