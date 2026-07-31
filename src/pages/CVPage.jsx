@@ -72,7 +72,7 @@ export const CVPage = () => {
                 <div className="mb-8">
                   <div className="flex justify-between items-baseline mb-1 border-b border-black/10 pb-2">
                     <h4 className="text-lg font-bold text-black">BillReve</h4>
-                    <span className="text-xs text-zinc-600 border border-zinc-300 px-2 py-1 rounded-full font-semibold tracking-wide">2023 - Present</span>
+                    <span className="text-xs text-zinc-600 border border-zinc-300 px-2 py-1 rounded-full font-semibold tracking-wide">2026</span>
                   </div>
                   <p className="text-sm font-medium text-zinc-500 mb-3 mt-2">SaaS Invoice Management System</p>
                   <ul className="list-disc list-outside text-sm space-y-2 ml-4 text-zinc-800 marker:text-accent">
@@ -84,13 +84,14 @@ export const CVPage = () => {
                 
                 <div className="mb-8">
                   <div className="flex justify-between items-baseline mb-1 border-b border-black/10 pb-2">
-                    <h4 className="text-lg font-bold text-black">Smart Home Dashboard</h4>
-                    <span className="text-xs text-zinc-600 border border-zinc-300 px-2 py-1 rounded-full font-semibold tracking-wide">2022</span>
+                    <h4 className="text-lg font-bold text-black">Insighta Labs Suite</h4>
+                    <span className="text-xs text-zinc-600 border border-zinc-300 px-2 py-1 rounded-full font-semibold tracking-wide">2025-2026</span>
                   </div>
-                  <p className="text-sm font-medium text-zinc-500 mb-3 mt-2">IoT Automation Interface</p>
+                  <p className="text-sm font-medium text-zinc-500 mb-3 mt-2">Data Operations & Analytics Platform</p>
                   <ul className="list-disc list-outside text-sm space-y-2 ml-4 text-zinc-800 marker:text-accent">
-                    <li>Developed an intuitive UI/UX for controlling IoT devices locally via customized DIY hardware setups.</li>
-                    <li>Utilized React alongside hardware-level scripts for low-latency state synchronization.</li>
+                    <li>Engineered both a robust Command Line Interface and a responsive Web Dashboard for secure data fetching.</li>
+                    <li>Demonstrated full-stack versatility and strong API design principles across multiple interfaces.</li>
+                    <li>Optimized user profile filtering and exporting capabilities with complex backend processing.</li>
                   </ul>
                 </div>
               </section>
