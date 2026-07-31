@@ -3,16 +3,16 @@ import { Layout, Server, Database, Terminal } from 'lucide-react';
 import { SpotlightCard } from '../ui/SpotlightCard';
 
 const SkillCategory = ({ icon: Icon, title, skills }) => (
-  <div className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-black/5 to-transparent dark:from-white/5 dark:to-transparent border border-black/10 dark:border-white/10 p-4 hover:border-accent/30 transition-all duration-300">
+  <div className="group relative overflow-hidden rounded-2xl bg-black/5 dark:bg-black/20 hover:bg-black/10 dark:hover:bg-black/40 border border-black/5 dark:border-white/5 hover:border-accent/50 transition-colors p-4">
     <div className="flex items-center gap-3 mb-4">
-      <div className="p-2.5 bg-white dark:bg-black rounded-xl shadow-sm border border-black/5 dark:border-white/5 group-hover:scale-110 group-hover:text-accent transition-transform">
+      <div className="p-2.5 bg-black/5 dark:bg-white/5 rounded-xl border border-black/5 dark:border-white/5 group-hover:scale-110 transition-transform">
          <Icon size={18} className="text-zinc-600 dark:text-zinc-400 group-hover:text-accent transition-colors" />
       </div>
       <span className="font-bold text-zinc-800 dark:text-zinc-200 tracking-wide text-sm uppercase">{title}</span>
     </div>
     <div className="flex flex-wrap gap-2">
       {skills.map(skill => (
-        <span key={skill} className="px-3 py-1.5 rounded-lg bg-white/80 dark:bg-black/50 text-xs font-semibold text-zinc-600 dark:text-zinc-400 border border-black/5 dark:border-white/5 shadow-[0_2px_10px_rgba(0,0,0,0.02)] group-hover:border-black/10 dark:group-hover:border-white/10 transition-colors">
+        <span key={skill} className="px-3 py-1.5 rounded-md bg-black/10 dark:bg-white/5 text-xs font-semibold text-zinc-700 dark:text-zinc-300 transition-colors">
           {skill}
         </span>
       ))}
