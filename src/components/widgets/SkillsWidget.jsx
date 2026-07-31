@@ -19,7 +19,7 @@ const SkillCategory = ({ icon: Icon, title, skills }) => (
 );
 
 export const SkillsWidget = () => (
-  <SpotlightCard className="col-span-1 md:col-span-1 lg:col-span-1 row-span-2">
+  <SpotlightCard className="col-span-1 md:col-span-2 lg:col-span-1 row-span-2">
     <h3 className="text-2xl font-semibold mb-6">Technical Arsenal</h3>
     <SkillCategory 
       icon={Layout} 

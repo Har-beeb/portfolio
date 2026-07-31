@@ -132,7 +132,7 @@ export const FeedbackWidget = () => {
   // Get exactly 3 visible feedbacks for the scrolling effect
   const visibleFeedbacks = [];
   if (feedbacks.length > 0) {
-    for (let i = 0; i < Math.min(3, feedbacks.length); i++) {
+    for (let i = 0; i < Math.min(2, feedbacks.length); i++) {
       visibleFeedbacks.push(feedbacks[(startIndex + i) % feedbacks.length]);
     }
   }
@@ -179,8 +179,8 @@ export const FeedbackWidget = () => {
         </form>
 
         {/* Display Segment (Auto-scrolling) */}
-        <div className="md:col-span-1 lg:col-span-5 flex flex-col overflow-hidden h-56 border-t md:border-t-0 md:border-l border-black/10 dark:border-white/10 pt-6 md:pt-0 md:pl-8 min-w-0">
-          <div className="flex justify-between items-start mb-3 min-h-[3rem]">
+        <div className="md:col-span-1 lg:col-span-5 flex flex-col overflow-hidden h-64 border-t md:border-t-0 md:border-l border-black/10 dark:border-white/10 pt-6 md:pt-0 md:pl-8 min-w-0">
+          <div className="flex flex-wrap justify-between items-start gap-y-2 gap-x-2 mb-3 min-h-[3rem]">
             <span className="text-xs text-zinc-500 font-semibold uppercase tracking-wider mt-1">Live Feedback</span>
             
             {/* Admin Clear Logic */}
@@ -198,7 +198,7 @@ export const FeedbackWidget = () => {
                     placeholder="Admin Password"
                     value={adminPassword}
                     onChange={(e) => setAdminPassword(e.target.value)}
-                    className="w-32 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded px-2 py-1 text-xs focus:outline-none focus:border-red-500 transition-colors"
+                    className="w-24 sm:w-32 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded px-2 py-1 text-xs focus:outline-none focus:border-red-500 transition-colors"
                     autoFocus
                   />
                   <button type="submit" className="text-xs bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600 transition-colors">
