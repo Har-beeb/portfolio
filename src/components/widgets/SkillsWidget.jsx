@@ -4,11 +4,11 @@ import { SpotlightCard } from '../ui/SpotlightCard';
 
 const SkillCategory = ({ icon: Icon, title, skills }) => (
   <div className="mb-6 last:mb-0">
-    <div className="flex items-center gap-2 mb-3 text-zinc-700 dark:text-zinc-300">
+    <div className="flex items-center justify-center gap-2 mb-3 text-zinc-700 dark:text-zinc-300">
       <Icon size={18} className="text-accent" />
       <span className="font-medium">{title}</span>
     </div>
-    <div className="flex flex-wrap gap-2">
+    <div className="flex flex-wrap justify-center gap-2">
       {skills.map(skill => (
         <span key={skill} className="px-3 py-1.5 rounded-lg bg-black/5 dark:bg-black/30 border border-black/5 dark:border-white/5 text-sm text-zinc-600 dark:text-zinc-400 transition-colors cursor-default">
           {skill}
@@ -20,7 +20,7 @@ const SkillCategory = ({ icon: Icon, title, skills }) => (
 
 export const SkillsWidget = () => (
   <SpotlightCard className="col-span-1 md:col-span-2 lg:col-span-1 row-span-2">
-    <h3 className="text-2xl font-semibold mb-6">Technical Arsenal</h3>
+    <h3 className="text-2xl font-semibold mb-6 text-center">Technical Arsenal</h3>
     <SkillCategory 
       icon={Layout} 
       title="Frontend & UI" 

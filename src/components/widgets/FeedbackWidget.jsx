@@ -139,47 +139,50 @@ export const FeedbackWidget = () => {
 
   return (
     <SpotlightCard className="col-span-1 md:col-span-2 lg:col-span-3 h-full group p-6">
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-12 gap-8 h-full items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 h-full items-center">
         
-        {/* Header Segment */}
-        <div className="md:col-span-1 lg:col-span-3 flex flex-col gap-3">
-          <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent">
-            <MessageSquare size={20} />
+        {/* Left Side: Header & Form */}
+        <div className="flex flex-col gap-6">
+          {/* Header Segment */}
+          <div className="flex flex-col gap-3">
+            <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+              <MessageSquare size={20} />
+            </div>
+            <div>
+              <h3 className="font-bold text-xl">Leave Feedback</h3>
+              <p className="text-sm text-zinc-500 mt-1">Tips, thoughts, or just say hi!</p>
+            </div>
           </div>
-          <div>
-            <h3 className="font-bold text-xl">Leave Feedback</h3>
-            <p className="text-sm text-zinc-500 mt-1">Tips, thoughts, or just say hi!</p>
-          </div>
+
+          {/* Form Segment */}
+          <form onSubmit={handleSubmit} className="flex flex-col gap-3 relative z-10">
+            <input 
+              type="text" 
+              placeholder="Your Name (Optional)" 
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-accent transition-colors"
+            />
+            <div className="relative">
+              <textarea 
+                placeholder="Write something..." 
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                className="w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-lg px-3 py-3 text-sm h-24 resize-none focus:outline-none focus:border-accent transition-colors pr-10"
+                required
+              />
+              <button 
+                type="submit"
+                className="absolute bottom-2 right-2 p-1.5 bg-accent text-white rounded-md hover:opacity-90 transition-opacity"
+              >
+                <Send size={14} />
+              </button>
+            </div>
+          </form>
         </div>
 
-        {/* Form Segment */}
-        <form onSubmit={handleSubmit} className="md:col-span-1 lg:col-span-4 flex flex-col gap-3 relative z-10">
-          <input 
-            type="text" 
-            placeholder="Your Name (Optional)" 
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-accent transition-colors"
-          />
-          <div className="relative">
-            <textarea 
-              placeholder="Write something..." 
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              className="w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-lg px-3 py-3 text-sm h-24 resize-none focus:outline-none focus:border-accent transition-colors pr-10"
-              required
-            />
-            <button 
-              type="submit"
-              className="absolute bottom-2 right-2 p-1.5 bg-accent text-white rounded-md hover:opacity-90 transition-opacity"
-            >
-              <Send size={14} />
-            </button>
-          </div>
-        </form>
-
         {/* Display Segment (Auto-scrolling) */}
-        <div className="md:col-span-1 lg:col-span-5 flex flex-col overflow-hidden h-64 border-t md:border-t-0 md:border-l border-black/10 dark:border-white/10 pt-6 md:pt-0 md:pl-8 min-w-0">
+        <div className="flex flex-col overflow-hidden h-64 border-t md:border-t-0 md:border-l border-black/10 dark:border-white/10 pt-6 md:pt-0 md:pl-8 min-w-0">
           <div className="flex flex-wrap justify-between items-start gap-y-2 gap-x-2 mb-3 min-h-[3rem]">
             <span className="text-xs text-zinc-500 font-semibold uppercase tracking-wider mt-1">Live Feedback</span>
             
