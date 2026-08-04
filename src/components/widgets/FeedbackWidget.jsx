@@ -63,7 +63,7 @@ export const FeedbackWidget = () => {
 
   // Auto-scroll logic for the marquee
   useEffect(() => {
-    if (feedbacks.length <= 3) return;
+    if (feedbacks.length <= 2) return;
     const interval = setInterval(() => {
       setStartIndex((prev) => (prev + 1) % feedbacks.length);
     }, 4000);
@@ -227,9 +227,9 @@ export const FeedbackWidget = () => {
           
           <div className="flex flex-col gap-3 relative flex-grow">
             <AnimatePresence mode="popLayout">
-              {visibleFeedbacks.map((fb) => (
+              {visibleFeedbacks.map((fb, i) => (
                 <motion.div 
-                  key={fb.id}
+                  key={`${startIndex}-${i}`}
                   layout
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
