@@ -12,14 +12,14 @@ export const PROJECTS = [
       "Built as a Monorepo with a cloud-native serverless architecture. Features PostgreSQL, Supabase Auth, Deno Edge Functions, and Row Level Security for secure multi-tenant data isolation.",
   },
   {
-    id: "ai-summarizer",
-    title: "AI Summarizer",
-    desc: "An intelligent web application that distills lengthy articles into concise summaries.",
-    tags: ["React", "Tailwind CSS", "OpenAI", "Vite"],
-    link: "https://github.com/Har-beeb/ai_summarizer",
-    image: "",
+    id: "blog",
+    title: "Spectrum Fullstack Blog App",
+    desc: "A comprehensive blogging platform.",
+    tags: ["React", "Node.js", "MaterialUI"],
+    link: "https://spectrum-roan.vercel.app/",
+    image: blog,
     details:
-      "Leverages modern AI APIs to process and summarize complex text data. Built with a sleek, responsive UI focused on reading experience and quick content ingestion.",
+      "Spectrum: A fullstack application which includes rich text editing, comments, and robust user authorization.",
   },
   {
     id: "insighta",
@@ -52,14 +52,14 @@ export const PROJECTS = [
       "Focuses heavily on precise Figma-to-code translation, featuring dark mode, dynamic status colors, and completely responsive form handling.",
   },
   {
-    id: "blog",
-    title: "Spectrum Fullstack Blog App",
-    desc: "A comprehensive blogging platform.",
-    tags: ["React", "Node.js", "MaterialUI"],
-    link: "https://github.com/Har-beeb",
-    image: blog,
+    id: "ai-summarizer",
+    title: "AI Summarizer",
+    desc: "An intelligent web application that distills lengthy articles into concise summaries.",
+    tags: ["React", "Tailwind CSS", "OpenAI", "Vite"],
+    link: "https://github.com/Har-beeb/ai_summarizer",
+    image: "",
     details:
-      "Spectrum: A fullstack application which includes rich text editing, comments, and robust user authorization.",
+      "Leverages modern AI APIs to process and summarize complex text data. Built with a sleek, responsive UI focused on reading experience and quick content ingestion.",
   },
 ];
 
