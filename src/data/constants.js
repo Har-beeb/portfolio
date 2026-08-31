@@ -26,7 +26,7 @@ export const PROJECTS = [
     title: "Insighta Labs Suite",
     desc: "A powerful CLI and Web interface to securely fetch, filter, and export user profiles.",
     tags: ["TypeScript", "React", "CLI"],
-    link: "https://https://insighta-web-tau.vercel.app/",
+    link: "https://insighta-web-tau.vercel.app/",
     image: insighta,
     details:
       "Engineered both a robust Command Line Interface and a responsive Web Dashboard, demonstrating full-stack versatility and strong API design principles.",
